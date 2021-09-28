@@ -21,7 +21,7 @@ RUN apt-get update && \
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends $EXTRA_PACKAGES $PHP_PACKAGES \
-        lib32gcc1 lib32stdc++6 wget binutils apache2 \
+        libgcc1 libstdc++6 wget binutils apache2 \
         vim zip unzip imagemagick lsof && \
     apt-get clean && \
     a2enmod php${PHP_VERSION} && \
