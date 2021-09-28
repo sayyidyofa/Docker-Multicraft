@@ -33,7 +33,8 @@ VOLUME /mc
 COPY config ${CONFIG_DIR}
 COPY init.sh /init.sh
 
-RUN chmod +x /init.sh
+RUN chmod +x /init.sh && \
+    ln -s /usr/local/openjdk-8/bin/java /usr/bin/java
 
 ENV MC_DAEMON_ID="1" \
     MC_DAEMON_PW="ChangeMe" \
